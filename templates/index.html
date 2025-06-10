@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/normalize.css" />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <link rel="" href="" />
+    <title>Files Upload</title>
+  </head>
+  <body>
+    <form class="upload" id="uploadForm">
+      <h1>Upload File</h1>
+      <p>allowed file extensions - .pdf .jpg .jpeg .png .txt</p>
+      <input type="file" name="file" id="fileInput" class="file-input" />
+      <button type="button" onclick="uploadFile()">Upload</button>
+      <p id="status"></p>
+    </form>
+    <div class="fileList" id="fileList"></div>
+    <script src="/static/script.js"></script>
+  </body>
+</html>
