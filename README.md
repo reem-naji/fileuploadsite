@@ -37,7 +37,8 @@ This project demonstrates how to integrate AWS S3 into a web application — cov
 └── static/
     ├── script.js       # Fetch-based upload & file listing logic
     └── css/
-        └── styles.css  # Page styles
+        └── styles.css  # Page styles+
+        └── normalize.css # cross-browser consistency for HTML elements
 ```
 
 > **Note:** Flask expects HTML templates under a `templates/` folder and static assets (JS, CSS) under `static/`. Move `index.html` to `templates/` and `script.js` / `styles.css` to `static/css/` before running.
@@ -112,7 +113,7 @@ Open your browser at `http://127.0.0.1:5000`.
 
 ## AWS Setup (Quick Reference)
 
-1. **Create an S3 bucket** in the [S3 Console](https://s3.console.aws.amazon.com/) — keep *Block all public access* **on** (pre-signed URLs handle access without making the bucket public).
+1. **Create an S3 bucket** in the [S3 Console](https://s3.console.aws.amazon.com/) — keep _Block all public access_ **on** (pre-signed URLs handle access without making the bucket public).
 2. **Create an IAM user** with programmatic access and attach a policy granting the three permissions listed above.
 3. Copy the generated **Access Key ID** and **Secret Access Key** into your `.env` file.
 
@@ -120,10 +121,10 @@ Open your browser at `http://127.0.0.1:5000`.
 
 ## Tech Stack
 
-| Layer | Technology |
-|---|---|
-| Backend | Python, Flask |
-| Cloud Storage | Amazon S3 (via `boto3`) |
-| Frontend | HTML, CSS, Vanilla JS (Fetch API) |
-| Config | `python-dotenv` |
-| Security | `werkzeug.utils.secure_filename`, pre-signed URLs |
+| Layer         | Technology                                        |
+| ------------- | ------------------------------------------------- |
+| Backend       | Python, Flask                                     |
+| Cloud Storage | Amazon S3 (via `boto3`)                           |
+| Frontend      | HTML, CSS, Vanilla JS (Fetch API)                 |
+| Config        | `python-dotenv`                                   |
+| Security      | `werkzeug.utils.secure_filename`, pre-signed URLs |
